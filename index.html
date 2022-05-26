@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <body>
+    <div class="header">
+      <h3>Répertoire de contact</h3>
+    </div>
 
-<body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <div class="main">
+      <ul class="content-img"></ul>
+      <div class="form">
+        <div class="form-title"><h3>Formulaire de contact</h3></div>
+        <form action="">
+          <div class="Glastname elt">
+            <label form="Prénom">prenom</label><br />
+            <input
+              type="text"
+              id="prenom"
+              name="lastname"
+              required
+              onkeyup="onlyLetters(this)"
+            />
+          </div>
 
+          <div class="Gname elt">
+            <label for="Nom">nom</label><br />
+            <input
+              type="text"
+              id="nom"
+              name="name"
+              required
+              onkeyup="onlyLetters(this)"
+            />
+          </div>
+
+          <div class="Ggroupe elt">
+            <label for="group">Groupe</label><br />
+            <select id="group" name="groupe">
+              <option value="Deveppeur FS">Deveppeur FS</option>
+              <option value="Specialiste MD">Specialiste MD</option>
+            </select>
+          </div>
+
+          <div class="Bio-t elt">
+            <label for="Bio">Bio</label><br />
+            <textarea name="bio" id="bio" required></textarea>
+          </div>
+          <br />
+          <div class="bas">
+            <input
+              type="file"
+              id="default-btn"
+              name="picture"
+              onchange="previewPicture(this)"
+              accept=".jpg, .png, .gif"
+              hidden
+              required
+            />
+            <button
+              type="submit"
+              onclick="defaultBtnActive()"
+              id="custom-btn"
+              class="custom-btn"
+            >
+              Choisir un fichier
+            </button>
+
+            <div class="img-choice">
+              <img alt="" id="image" />
+            </div>
+          </div>
+
+          <div class="bouton">
+            <button class="bt-cree">Créer</button>
+            <button class="bt-reinit">Réinit.</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="list">
+        <div class="list-title"><h3>Liste de contact</h3></div>
+        <div class="global-contact"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
