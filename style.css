@@ -1,4 +1,244 @@
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Traitement de header */
+.header {
+  background: #2d7fec;
+  height: 60px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+.header h3 {
+  color: white;
+  padding: 15px;
+}
+/* Traitement du main */
+.main {
+  margin: 10px;
+  background: #ce22ec;
+}
+
+.main {
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.form,
+.list {
+  border: 1px solid #94b0d4;
+}
+.form {
+  width: 40%;
+  margin-right: 5px;
+}
+.list {
+  width: 60%;
+}
+.form-title,
+.list-title {
+  background: #2d7fec;
+  height: 50px;
+}
+.form-title h3,
+.list-title h3 {
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Traitement du formulaire */
+form {
+  padding: 40px 10px;
+}
+
+.form .elt {
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  height: 30px;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+}
+input,
+textarea {
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+
+#lastname:focus {
+  border: none;
+}
+select {
+  border: none;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("images/flèche.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 100% 0;
+  user-select: text;
+  outline: none;
+}
+
+/*select::-ms-expand {
+  display: none;
+}*/
+
+label {
+  color: #2d7fec;
+  font-size: 16px;
+}
+
+.img-choice {
+  margin-right: 25px;
+}
+
+.bouton {
+  text-align: center;
+}
+button {
+  margin: 0 10px;
+  width: 130px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.bt-cree {
+  background: #2d7fec;
+}
+.bt-reinit {
+  background: rgb(233, 105, 105);
+}
+/*.btfile {
+  margin-left: 20px;
+}*/
+.bas {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.bas .img-choice {
+  width: 150px;
+  width: 150px;
+  border: 1px solid #000;
+}
+
+.bas .img-choice img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-btn {
+  background: rgb(233, 228, 228);
+  width: 23%;
+  color: black;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* ###### Définition des classes utilisables en Js */
+.divcontact {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #94b0d4;
+  border-left: 1px solid #94b0d4;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.divimage {
+  width: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 35px;
+}
+
+.divtext {
+  margin-top: 15px;
+}
+
+.textlabel {
+  color: #000;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: gray;
+  font-weight: bold;
+}
+
+.textp {
+  margin-top: 10px;
+  color: gray;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.divimgcroix {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url("images/croi.png");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 1;
+}
+.divbtcroi {
+  width: 100px;
+  height: 100px;
+  margin-top: 0;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  background: whitesmoke;
+  z-index: 3;
+}
+
+@media screen and (max-width: 815px) {
+  .main {
+    flex-direction: column;
+  }
+  .form,
+  .list {
+    margin: auto;
+    width: 100%;
+  }
+  .form {
+    margin-bottom: 20px;
+  }
 }
